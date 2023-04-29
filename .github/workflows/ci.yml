@@ -1,4 +1,4 @@
-name: Learn Terraform
+name: CI
 
 on:
   pull_request:
