@@ -1,5 +1,8 @@
 name: Demo Workflow 2
-on: [push]
+on: 
+    push:
+        branches:
+            - main
 jobs:
  Demo-Job:
    runs-on: ubuntu-latest
@@ -12,5 +15,5 @@ jobs:
          ls ${{ github.workspace }}
      - run: echo "Job's status is ${{ job.status }}"
      - name: read the README.md file
-       run: |
-         cat README.md
+       run: cat ${{ github.workspace }}/README.md
+       # can also type cat README.md
